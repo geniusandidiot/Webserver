@@ -15,6 +15,7 @@ Linux下C++轻量级Web服务器
 
 项目启动
 --
+* 确认已安装MySQL数据库
 ```cpp
 // 建立yourdb库
 create database yourdb;
@@ -30,15 +31,25 @@ CREATE TABLE user(
 INSERT INTO user(username, passwd) VALUES('name', 'passwd');
 ```
 
-修改main.cpp中的数据库初始化信息
+* 修改main.cpp中的数据库初始化信息
 ```cpp
 //数据库登录名,密码,库名
 string user = "root";
-string passwd = "root";
+string passWord = "root";
 string databasename = "yourdb";
 ```
 
-build
+* build
 ```cpp
 sh ./build.sh
+```
+
+* 启动server
+```cpp
+./server
+```
+
+* 浏览器端输入ip:port进行访问测试
+```cpp
+ip:9006
 ```
